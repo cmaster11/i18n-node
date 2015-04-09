@@ -174,6 +174,9 @@ i18n.__n = function i18nTranslatePlural(singular, plural, count) {
     // called like  __n('cat', 3)
     if (typeof plural === 'number' || parseInt(plural, 10)+"" === plural) {
       count = plural;
+      
+      plural = singular + 's';
+      
       args.unshift(count);
       args.unshift(plural);
     }
